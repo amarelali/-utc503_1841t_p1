@@ -26,6 +26,8 @@ def moyenneElement(list):
 #     else:
 #         return list[0]+trierList(list[1:])
 
+
+
 if __name__ == "__main__":
     list = [ 3, 1, 2, 0, 4]
     print(nbElement(list))
