@@ -18,19 +18,38 @@ def moyenneElement(list):
         return tete_(list)
     else:
         return (tete_(list) + (len(list) - 1) * moyenneElement(reste_(list))) / len(list)
-# NewList = []
-# def trierList(list):
-#     if list[0] > list[1] :
-#         NewList.append(list[1])
-#         NewList.append(list[0])
-#     else:
-#         return list[0]+trierList(list[1:])
-
-
+#4
+def insereElement_ListTrier(list , nb):
+    if len(list) == 1 :
+        return tete_(list)
+    else:
+        if nb > list[0]:
+            list2 = [nb]
+            list3 = [list[0]]
+            return list3 + list2 + list[1:]
+        elif nb < list[0] :
+            list2 = [nb]
+            return list2 + list
+#5
+NewList = []
+def trierList(list):
+    if list == [] :
+        return list
+    elif len(list) == 1 :
+        return list
+    elif list[0] > list[1] :
+      for x in list:
+          if list[0] > x:
+            print(x)
+    #   NewList = [list[1],list[0]] 
+    #   return NewList + trierList(list[2:])
+    else:
+        return list[0]+trierList(list[1:])
 
 if __name__ == "__main__":
     list = [ 3, 1, 2, 0, 4]
     print(nbElement(list))
     print(sommeElement(list))
     print(moyenneElement(list))
-    # print(trierList(list))
+    print(trierList([5, 4 ,1 ,0 ,2]))
+    print(insereElement_ListTrier([ 1, 3, 4, 5] , 2))
