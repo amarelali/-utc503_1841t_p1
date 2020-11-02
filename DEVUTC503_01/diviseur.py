@@ -5,3 +5,6 @@ def diviseur(n):
             return i
          else:
             i=i+1
+if __name__ == "__main__":
+    print(diviseur(8))
+    print(diviseur(9))

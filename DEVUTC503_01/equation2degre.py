@@ -1,3 +1,4 @@
+from math import sqrt
 a=eval(input("entrer valeur de a:"))
 b=eval(input("entrer valeur de b:"))
 c=eval(input("entrer valeur de c:"))
