@@ -7,7 +7,7 @@ def rendreMonnaieRec(list , monnaie):
     else:            
             n = monnaie / list[0]
             listRendu.append(int(n))
-            print(listRendu)
+
             monnaie = (monnaie - list[0])
             return listRendu + rendreMonnaieRec(list[1:] , monnaie)
         
